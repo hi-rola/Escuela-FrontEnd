@@ -10,13 +10,21 @@ import { MaterialDesignModule } from './models/MaterialDesing.module';
 //componentes
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { HomeComponent } from './pages/Maestro/home/home.component';
+import { TareasComponent } from './pages/Maestro/tareas/tareas.component';
+import { EstudiantesComponent } from './pages/Maestro/estudiantes/estudiantes.component';
+import { LoginComponent } from './shared/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    TareasComponent,
+    EstudiantesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
