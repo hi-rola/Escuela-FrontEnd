@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +15,8 @@ import { HomeComponent } from './pages/Maestro/home/home.component';
 import { TareasComponent } from './pages/Maestro/tareas/tareas.component';
 import { EstudiantesComponent } from './pages/Maestro/estudiantes/estudiantes.component';
 import { LoginComponent } from './shared/login/login.component';
+import { RegistrarTareaComponent } from './pages/Maestro/tareas/registrar-tarea/registrar-tarea.component';
+import { MsjEliminarTareaComponent } from './pages/Maestro/tareas/msj-eliminar-tarea/msj-eliminar-tarea.component';
 
 
 @NgModule({
@@ -24,13 +27,19 @@ import { LoginComponent } from './shared/login/login.component';
     HomeComponent,
     TareasComponent,
     EstudiantesComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrarTareaComponent,
+    MsjEliminarTareaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialDesignModule
+    MaterialDesignModule,
+    HttpClientModule
+  ],
+  entryComponents: [
+    RegistrarTareaComponent, MsjEliminarTareaComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,11 +15,14 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const materialModules = [
     MatButtonModule, MatMenuModule, MatToolbarModule, MatIconModule, MatCardModule, MatDividerModule,
     MatRippleModule, MatDialogModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule,
-    MatSelectModule, MatTooltipModule, MatDatepickerModule, MatNativeDateModule, MatSnackBarModule
+    MatSelectModule, MatTooltipModule, MatDatepickerModule, MatNativeDateModule, MatSnackBarModule,
+    MatProgressBarModule, MatExpansionModule
 ];
 
 @NgModule({
