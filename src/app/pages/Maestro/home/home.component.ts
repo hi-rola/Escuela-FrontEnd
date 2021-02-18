@@ -10,13 +10,17 @@ export class HomeComponent implements OnInit {
 
   centered = false;
 
-  constructor(private router : Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+   
   }
 
-  tareas(){
+  tareas() {
     this.router.navigate(['/tareas-academico']);
   }
+
+
+  
 
 }
