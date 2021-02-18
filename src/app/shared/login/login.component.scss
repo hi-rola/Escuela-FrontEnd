@@ -12,12 +12,27 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  min-height: 300px;
+  min-height: 350px;
   border-radius: 6px;
   background-color: #fff;
 }
 
 .container-titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.spinner {
+  width: 100%;
+  height: 5px;
+  margin-top: 0px;
+}
+
+.titulo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,15 +42,29 @@
 
 .titulo-login {
   font-size: 26px;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: 600;
   text-align: center;
   color: #496b97;
 }
 
+.mensaje {
+  height: 40px;
+}
+
+.mensaje-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: gray;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .form-login {
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 10px;
   width: 90%;
 }
 
@@ -43,11 +72,15 @@
   width: 100%;
 }
 
+.input:nth-child(2) {
+  margin-top: 15px;
+}
+
 .div-boton {
   width: 100%;
   height: 45px;
   position: relative;
-  top: 20px;
+  top: 45px;
 }
 
 .boton {
