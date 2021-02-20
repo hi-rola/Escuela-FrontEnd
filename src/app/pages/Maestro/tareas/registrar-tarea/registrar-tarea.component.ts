@@ -35,6 +35,7 @@ export class RegistrarTareaComponent implements OnInit {
     estatus_expiracion: [''],
     id_maestro: ['']
   });
+  
   horizontalPosition: MatSnackBarHorizontalPosition = 'left';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 

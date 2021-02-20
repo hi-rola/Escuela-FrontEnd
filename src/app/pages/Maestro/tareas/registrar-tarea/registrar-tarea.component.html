@@ -1,20 +1,20 @@
 <div class="header-dialog">
     <div>
-        <h2 class="titulo-card">Crear nuevo proyecto</h2>
+        <h2 class="titulo-card">Registrar nueva tarea</h2>
     </div>
 </div>
 <mat-dialog-content class="mat-typography">
     <div class="form-proyecto">
         <form [formGroup]="formRegistrarTarea">
             <mat-form-field appearance="fill" class="form">
-                <mat-label>Nombre del proyecto</mat-label>
+                <mat-label>Nombre de la tarea</mat-label>
                 <input matInput formControlName="nombre">
                 <mat-error *ngIf="form.nombre.touched || form.nombre.dirty || form.nombre.invalid">
                     <span class="mensaje-errror" *ngIf="form.nombre.errors?.required">Falta ingresar el nombre</span>
                 </mat-error>
             </mat-form-field>
             <mat-form-field appearance="fill" class="form top">
-                <mat-label>Descripción del proyecto</mat-label>
+                <mat-label>Descripción de la tarea</mat-label>
                 <textarea matInput style="height: 80px;" #message maxlength="60"
                     formControlName="descripcion"></textarea>
                 <mat-hint align="end">{{message.value.length}} / 60</mat-hint>
