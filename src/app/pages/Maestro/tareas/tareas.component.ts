@@ -5,6 +5,7 @@ import { MaestroService } from '../maestro.service';
 import { Tarea } from '../Tarea';
 import { RegistrarTareaComponent } from './registrar-tarea/registrar-tarea.component';
 import { MsjEliminarTareaComponent } from './msj-eliminar-tarea/msj-eliminar-tarea.component';
+import { ActualizarTareaComponent } from './actualizar-tarea/actualizar-tarea.component';
 
 @Component({
   selector: 'app-tareas',
@@ -29,16 +30,18 @@ export class TareasComponent implements OnInit {
       (result: Tarea[]) => {
         this.listTareas = result;
       }
-    )
+    );
   }
 
-  abrirDialog() {
+  dialogRegistrarTarea() {
     const dialogRef = this.dialog.open(RegistrarTareaComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.ngOnInit();
-        this.getTareasByMaestro();
+        setTimeout(() => {
+          this.ngOnInit();
+          this.getTareasByMaestro();
+        }, 3000);
       }
     });
   }
@@ -74,9 +77,22 @@ export class TareasComponent implements OnInit {
     });
   }
 
+  dialogActualizarTarea(tarea: Tarea) {
+    const dialogRef = this.dialog.open(ActualizarTareaComponent, {
+      width: '450px',
+      data: { id_tarea: tarea.id_tarea }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.ngOnInit();
+        this.getTareasByMaestro();
+      }
+    });
+  }
+
   getId(): string {
     return localStorage.getItem('idM');
   }
-
 
 }

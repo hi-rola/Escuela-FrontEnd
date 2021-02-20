@@ -3,7 +3,7 @@
     <div class="main">
         <div class="container-tareas">
             <div class="div-tarea">
-                <div class="agregar-tarea mat-elevation-z4" (click)="abrirDialog()">
+                <div class="agregar-tarea mat-elevation-z4" (click)="dialogRegistrarTarea()">
                     <span class="titulo-registrar">Registrar tarea</span>
                     <div class="icon-agregar-tarea mat-elevation-z4">
                         <mat-icon class="icon-add">add_circle</mat-icon>
@@ -33,7 +33,7 @@
                             </button>
                             <mat-menu #menu="matMenu">
                                 <button mat-menu-item class="item-menu" (click)="dialogEliminarTarea(tarea)">Eliminar tarea</button>
-                                <button mat-menu-item class="item-menu">Actualizar información</button>
+                                <button mat-menu-item class="item-menu" (click)="dialogActualizarTarea(tarea)">Actualizar información</button>
                                 <button mat-menu-item class="item-menu">Ver estadísticas</button>
                             </mat-menu>
                         </div>
