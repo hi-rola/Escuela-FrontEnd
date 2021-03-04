@@ -22,6 +22,8 @@ import { ActualizarTareaComponent } from './pages/Maestro/tareas/actualizar-tare
 import { EstadisticasTareaComponent } from './pages/Maestro/tareas/estadisticas-tarea/estadisticas-tarea.component';
 import { EstudiantesMaestroComponent } from './pages/Maestro/estudiantes-maestro/estudiantes-maestro/estudiantes-maestro.component';
 import { RegistrarEstudianteComponent } from './pages/Maestro/estudiantes-maestro/registrar-estudiante/registrar-estudiante.component';
+import { MsjEliminarEstudianteComponent } from './pages/Maestro/estudiantes-maestro/msj-eliminar-estudiante/msj-eliminar-estudiante.component';
+import { ActualizarEstudianteComponent } from './pages/Maestro/estudiantes-maestro/actualizar-estudiante/actualizar-estudiante.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { RegistrarEstudianteComponent } from './pages/Maestro/estudiantes-maestr
     ActualizarTareaComponent,
     EstadisticasTareaComponent,
     EstudiantesMaestroComponent,
-    RegistrarEstudianteComponent
+    RegistrarEstudianteComponent,
+    MsjEliminarEstudianteComponent,
+    ActualizarEstudianteComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,8 @@ import { RegistrarEstudianteComponent } from './pages/Maestro/estudiantes-maestr
   ],
   entryComponents: [
     RegistrarTareaComponent, MsjEliminarTareaComponent, ActualizarTareaComponent,
-    RegistrarEstudianteComponent
+    RegistrarEstudianteComponent, MsjEliminarEstudianteComponent,
+    ActualizarEstudianteComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

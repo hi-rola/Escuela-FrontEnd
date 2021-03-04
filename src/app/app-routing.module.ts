@@ -9,7 +9,9 @@ import { EstudiantesMaestroComponent } from './pages/Maestro/estudiantes-maestro
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'home-academico', component: HomeComponent },
+  {
+    path: 'home-academico', component: HomeComponent
+  },
   { path: 'tareas-academico', component: TareasComponent },
   { path: 'estadisticas-tarea', component: EstadisticasTareaComponent },
   { path: 'estudiantes-maestros', component: EstudiantesMaestroComponent },

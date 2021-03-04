@@ -52,4 +52,16 @@ export class MaestroService {
   registrarEstudiante(nuevoEstudiante: any): Observable<any> {
     return this.http.post(this.URL_BACKEND + '/estudiantes/', nuevoEstudiante);
   }
+
+  getEstudianteById(id_estudiane: number): Observable<any> {
+    return this.http.get(this.URL_BACKEND + '/estudiantes/' + id_estudiane);
+  }
+
+  eliminarEstudiante(id_estudiante: number): Observable<any> {
+    return this.http.delete(this.URL_BACKEND + '/estudiantes/' + id_estudiante)
+  }
+
+  updateEstudiante(id_estudiante: number, datos: any): Observable<any> {
+    return this.http.put(this.URL_BACKEND + '/estudiantes/' + id_estudiante, datos);
+  }
 }
