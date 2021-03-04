@@ -85,8 +85,10 @@ export class TareasComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.ngOnInit();
-        this.getTareasByMaestro();
+        setTimeout(() => {
+          this.ngOnInit();
+          this.getTareasByMaestro();
+        }, 3000);
       }
     });
   }
