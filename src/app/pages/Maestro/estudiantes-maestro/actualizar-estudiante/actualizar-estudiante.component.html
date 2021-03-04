@@ -1,0 +1,38 @@
+<div class="header-dialog">
+    <div>
+        <h2 class="titulo-card">Registrar estudiante</h2>
+    </div>
+</div>
+<mat-dialog-content class="mat-typography">
+    <div class="form-proyecto">
+        <form [formGroup]="formActualizarEstudiante">
+            <mat-form-field appearance="fill" class="form">
+                <mat-label>Nombre (s)</mat-label>
+                <input matInput formControlName="nombre">
+                <mat-error *ngIf="form.nombre.touched || form.nombre.dirty || form.nombre.invalid">
+                    <span class="mensaje-errror" *ngIf="form.nombre.errors?.required">Falta ingresar el nombre</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form top">
+                <mat-label>Apellidos</mat-label>
+                <input matInput formControlName="apellidos">
+                <mat-error *ngIf="form.apellidos.touched || form.apellidos.dirty || form.apellidos.invalid">
+                    <span class="mensaje-errror" *ngIf="form.apellidos.errors?.required">Falta ingresar los
+                        apellidos</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="form top">
+                <mat-label>Contraseña</mat-label>
+                <input matInput formControlName="contrasena">
+                <mat-error *ngIf="form.contrasena.touched || form.contrasena.dirty || form.contrasena.invalid">
+                    <span class="mensaje-errror" *ngIf="form.contrasena.errors?.required">Falta ingresar la
+                        contraseña</span>
+                </mat-error>
+            </mat-form-field>
+        </form>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-button [mat-dialog-close]="true" (click)="actualizarInformacion()" cdkFocusInitial>Actualizar informacion</button>
+</mat-dialog-actions>

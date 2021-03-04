@@ -13,9 +13,15 @@
             <div class="contenido-estudiantes">
                 <div class="card-estudiante mat-elevation-z3" *ngFor="let estudiante of listEstudiantes">
                     <div class="menu-acciones">
-                        <button mat-icon-button>
+                        <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="Más">
                             <mat-icon>more_horiz</mat-icon>
                         </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item class="item-menu" (click)="dialogEliminarEstudiante(estudiante)">Eliminar
+                                estudiante</button>
+                            <button mat-menu-item class="item-menu" (click)="dialogActualizarEstudiante(estudiante)">Actualizar
+                                información</button>
+                        </mat-menu>
                     </div>
                     <div class="contenido-informacion">
                         <div class="estudiante-img">
